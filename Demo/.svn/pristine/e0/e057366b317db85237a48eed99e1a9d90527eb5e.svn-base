@@ -1,0 +1,27 @@
+package demo;
+
+public class test
+{
+	
+	public static String xor (String m)
+	{
+		char [] c = m.toCharArray();     // String ---> char
+		for(int i=0 ; i<c.length; i++)
+		{
+			c[i] = (char)(c[i]^200);
+		}
+		return (new String (c));       // char----> String
+	}
+	
+
+	public static void main(String[] args)
+	{
+		String s = "hyl";
+	    String ss =	xor(s);
+		System.out.println("加密: " + ss);
+		
+		System.out.println("解密: " + xor(s));
+
+	}
+
+}
